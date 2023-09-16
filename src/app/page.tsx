@@ -4,9 +4,9 @@ import classnames from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { Layout } from '@/components/l-ayout';
+import { Layout } from '@/components/layout';
 import { ProjectTile } from '@/components/project-tile';
-import { Sidebar } from '@/components/s-idebar';
+import { Sidebar } from '@/components/sidebar';
 
 import styles from './home.module.scss';
 import projectData from './project-data.json';
@@ -25,7 +25,7 @@ export default function Home() {
       <div className={styles.hero}>
         <Image
           className={styles.hero__image}
-          src="/hero-bg.jpg"
+          src="/michael-caley.jpg"
           alt="Michael Caley web developer on a bridge"
           width="1597"
           height="649"
