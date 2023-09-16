@@ -4,6 +4,37 @@
   position: relative;
   overflow: hidden;
   @apply w-full;
+  height: 649px;
+
+  &__image {
+    position: absolute;
+    min-height: 100%;
+    min-width: 100%;
+    max-width: none;
+    width: auto;
+    left: 50%;
+    transform: translate3d(-60%, 0, 0);
+
+    @media all and (min-width: $tablet-size) {
+      position: relative;
+      left: 0;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  &__text-area {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translate(0, -50%);
+    pointer-events: none;
+  }
+
+  &__title {
+    color: rgba(255, 255, 255, 0.8);
+
+    @apply text-sm tracking-widest;
+  }
 }
 
 .torch {
@@ -13,18 +44,143 @@
   transform: translate(50%, -50%);
   width: 200%;
   height: 200%;
-  // transition: transform 0.3s ease-out;
-  // background: linear-gradient(
-  //   90deg,
-  //   rgba(0, 0, 0, 0.7) 50%,
-  //   rgba(0, 0, 0, 0.7) 50%
-  // );
 
-  // @media all and (min-width: $tablet-size) {
   background: radial-gradient(
     circle,
     rgba(255, 255, 255, 0) 0%,
     rgba(0, 0, 0, 0.9) 20%
   );
-  // }
+}
+
+.fade {
+  display: inline-block;
+  transform: translateY(100%);
+  opacity: 0;
+  animation: titleFade 0.4s ease-out forwards;
+}
+
+.fade--2 {
+  animation-delay: 0.4s;
+}
+
+.fade--3 {
+  animation-delay: 0.8s;
+}
+
+@keyframes titleFade {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  10% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+.container {
+  display: block;
+  position: relative;
+  width: 100%;
+  max-width: 1170px;
+  margin: 100px auto;
+
+  &__title {
+    display: flex;
+    justify-content: left;
+    padding: 0 15px;
+    box-sizing: border-box;
+    @apply mb-10;
+
+    @media all and (min-width: $tablet-size) {
+      justify-content: center;
+    }
+
+    h1 {
+      @apply tracking-widest;
+
+      font-size: 18px;
+      font-weight: 400;
+      text-transform: uppercase;
+      text-align: center;
+      line-height: 1.4;
+    }
+  }
+}
+
+.about {
+  display: block;
+
+  @media all and (min-width: $tablet-size) {
+    display: flex;
+  }
+
+  &__text {
+    text-align: justify;
+    padding: 0 15px;
+    font-size: $font-size;
+    font-weight: 300;
+    color: $grey;
+    line-height: 1.7;
+    box-sizing: border-box;
+
+    @media all and (min-width: $tablet-size) {
+      width: 33%;
+    }
+  }
+}
+
+.hr {
+  &--default {
+    margin: 0;
+    border-top: 1px solid #eee;
+    background-color: rgba(255, 255, 255, 1);
+    opacity: 0.8;
+  }
+}
+
+.projects {
+  padding: 0 15px;
+
+  &__title {
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: left;
+    line-height: 1.4;
+
+    @media all and (min-width: $tablet-size) {
+      text-align: center;
+    }
+
+    @apply tracking-widest mb-10;
+  }
+
+  &__text {
+    font-size: $font-size;
+    font-weight: 300;
+    color: $grey;
+    line-height: 1.7;
+    max-width: 620px;
+    margin: 0 auto 50px;
+    text-align: left;
+
+    @media all and (min-width: $tablet-size) {
+      text-align: center;
+    }
+  }
+
+  &__row {
+    display: block;
+
+    @media all and (min-width: $tablet-size) {
+      display: flex;
+    }
+  }
 }
