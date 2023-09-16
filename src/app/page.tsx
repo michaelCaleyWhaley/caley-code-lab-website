@@ -1,5 +1,7 @@
 'use client';
 
+import { Layout } from '@/components/Layout';
+
 // import classnames from 'classnames';
 // import Link from 'next/link';
 
@@ -12,9 +14,8 @@
 
 export default function Home() {
   return (
-    <>
-      <h1>Placeholder</h1>
-      {/* <Nav /> */}
-    </>
+    <Layout>
+      <p className="py-5 h-screen mb-96">placeholder</p>
+    </Layout>
   );
 }

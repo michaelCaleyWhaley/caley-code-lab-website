@@ -1,0 +1,75 @@
+@import '../../app/variables.scss';
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  transition: background-color ease-out 0.3s;
+  z-index: 1;
+
+  &__logo {
+    display: flex;
+    border-width: 0px;
+    margin: 0px;
+    letter-spacing: 3px;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.2);
+    align-self: center;
+    padding: 0 15px;
+    transition: color ease-out 0.3s;
+
+    &--underline {
+      transition: border-bottom ease-out 0.3s;
+      border-bottom: 1px solid rgba(255, 255, 255, 0);
+    }
+
+    .nav__active & {
+      color: rgba(255, 255, 255, 0.8);
+
+      &--underline {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+      }
+    }
+
+    &--icon {
+      width: 22px;
+      height: 22px;
+    }
+  }
+
+  &__links {
+    display: flex;
+    padding: 4px 16px;
+    list-style-type: none;
+    margin: 0;
+    align-self: center;
+  }
+
+  &__link {
+    padding: 6px 8px;
+
+    a {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      font-size: 13px;
+      letter-spacing: 2px;
+      font-weight: 300;
+    }
+  }
+
+  &__active {
+    background-color: rgba(10, 10, 10, 0.9);
+  }
+
+  &--contact,
+  &--projects {
+    background-color: rgba(10, 10, 10, 0.9);
+
+    .nav__logo {
+      color: rgba(255, 255, 255, 0.8);
+    }
+  }
+}
