@@ -2,8 +2,8 @@
 
 import Head from 'next/head';
 
-import { Footer } from '../Footer';
-import { Nav } from '../Nav';
+import { Footer } from '../f-ooter';
+import { Nav } from '../n-av';
 
 function Layout({
   title = 'Michael Caley Web Developer',

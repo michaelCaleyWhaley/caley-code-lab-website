@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import styles from './ProjectTile.module.scss';
+import styles from './project-tile.module.scss';
 
 function ProjectTile({
   imgSrc,

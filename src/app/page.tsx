@@ -4,12 +4,12 @@ import classnames from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { Layout } from '@/components/Layout';
-import { ProjectTile } from '@/components/ProjectTile';
-import { Sidebar } from '@/components/Sidebar';
+import { Layout } from '@/components/l-ayout';
+import { ProjectTile } from '@/components/project-tile';
+import { Sidebar } from '@/components/s-idebar';
 
 import styles from './home.module.scss';
-import projectData from './projectData.json';
+import projectData from './project-data.json';
 
 const mostRecentProjects = (() => {
   let recentProjects = [];

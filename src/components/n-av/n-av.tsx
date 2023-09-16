@@ -4,7 +4,7 @@ import classnames from 'classnames';
 import Link from 'next/link';
 import { useCallback, useEffect, useState } from 'react';
 
-import styles from './Nav.module.scss';
+import styles from './n-av.module.scss';
 
 const links = [
   { href: '/', label: 'Home', key: '' },
