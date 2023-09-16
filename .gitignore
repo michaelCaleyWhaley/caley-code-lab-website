@@ -37,4 +37,3 @@ next-env.d.ts
 /.terraform
 /.terraform/
 *.terraform
-platform_config/
