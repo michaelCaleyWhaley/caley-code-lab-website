@@ -1,26 +1,30 @@
-.heading-1 {
-  @apply mb-12 text-3xl font-medium tracking-tight md:text-4xl text-center;
+@import './variables.scss';
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  @apply w-full;
 }
 
-.heading-2 {
-  @apply text-lg font-light tracking-tight md:text-2xl text-center max-w-4xl mx-auto mb-12;
-}
+.torch {
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  transform: translate(50%, -50%);
+  width: 200%;
+  height: 200%;
+  // transition: transform 0.3s ease-out;
+  // background: linear-gradient(
+  //   90deg,
+  //   rgba(0, 0, 0, 0.7) 50%,
+  //   rgba(0, 0, 0, 0.7) 50%
+  // );
 
-.btn {
-  @apply bg-custom-blue hover:bg-custom-blue-1 text-white font-bold py-2 px-4 rounded;
-
-  &__member {
-    @apply absolute top-0 left-0 w-full h-full;
-  }
-}
-
-.get-started {
-  @apply inline-block list-decimal mb-5 text-left pl-5;
-
-  &__steps {
-  }
-}
-
-.mailbox {
-  @apply mt-10;
+  // @media all and (min-width: $tablet-size) {
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(0, 0, 0, 0.9) 20%
+  );
+  // }
 }

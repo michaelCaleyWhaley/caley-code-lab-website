@@ -2,6 +2,7 @@
 
 import Head from 'next/head';
 
+import { Footer } from '../Footer';
 import { Nav } from '../Nav';
 
 function Layout({
@@ -31,11 +32,9 @@ function Layout({
       </Head>
 
       <Nav pageClass={pageClass} />
-      {/* <div ref={this.layoutPreload} className="layout-preload"> */}
       {children}
-      {/* </div> */}
 
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

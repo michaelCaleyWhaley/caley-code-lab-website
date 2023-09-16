@@ -2,6 +2,8 @@
 
 This is a profile website for Michael Caley. It will feature tech blog posts and articles.
 
+Temporary url `http://caley-code-lab-website.s3-website.eu-west-2.amazonaws.com`
+
 ## Deploy to AWS
 
 Look in `platform_config` for infrastructure declarations.
