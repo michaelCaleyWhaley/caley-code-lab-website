@@ -4,7 +4,7 @@ import classnames from 'classnames';
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 
-import styles from './s-idebar.module.scss';
+import styles from './sidebar.module.scss';
 
 type EventData = {
   title: string;

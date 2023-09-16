@@ -6,7 +6,7 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classnames from 'classnames';
 
-import styles from './f-ooter.module.scss';
+import styles from './footer.module.scss';
 
 function Footer() {
   return (
