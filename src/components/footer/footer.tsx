@@ -11,7 +11,7 @@ import styles from './footer.module.scss';
 function Footer() {
   return (
     <footer>
-      <div className={styles['container']}>
+      <div className={classnames(styles['container'], 'mb-20')}>
         <div
           className={classnames(
             styles['footer-row'],

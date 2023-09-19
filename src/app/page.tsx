@@ -8,8 +8,8 @@ import { Layout } from '@/components/layout';
 import { ProjectTile } from '@/components/project-tile';
 import { Sidebar } from '@/components/sidebar';
 
+import projectData from '../shared/project-data.json';
 import styles from './home.module.scss';
-import projectData from './project-data.json';
 
 const mostRecentProjects = (() => {
   let recentProjects = [];
@@ -55,9 +55,27 @@ export default function Home() {
           <h1>About me</h1>
         </div>
         <div className={styles['about']}>
-          <p className={styles['about__text']}>blah blah</p>
-          <p className={styles['about__text']}>blah blah</p>
-          <p className={styles['about__text']}>blah blah</p>
+          <p className={styles['about__text']}>
+            Hi! I am Michael Sherris Caley, web and software engineer. I
+            originally hail from the North East of England but currently reside
+            in Central London where I work as a tech lead for a large ecommerce
+            company.
+          </p>
+          <p className={styles['about__text']}>
+            I have developed a variety of projects for clients ranging from
+            websites, PDF merge/download tools, custom SVG animation players,
+            HTML email submission services and serverless graphQL backends.
+          </p>
+          <p className={styles['about__text']}>
+            For fun I try to work on my{' '}
+            <a target="_blank" href="https://www.youtube.com/@caleyCodeLab">
+              YouTube channel
+            </a>{' '}
+            which is helping me to grow as a developer and a person. I can tell
+            you from experience that nothing ups your game like trying to
+            explain web development concepts to a camera whilst attempting to
+            entertain.
+          </p>
         </div>
       </div>
 
@@ -84,6 +102,8 @@ export default function Home() {
               desc={project.desc}
               sidebarData={project.sidebarData}
               key={`project-${index}`}
+              priority
+              lazyload="eager"
             />
           ))}
         </div>

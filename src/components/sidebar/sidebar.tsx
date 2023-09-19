@@ -92,7 +92,7 @@ function Sidebar() {
             alt={sidebarContent?.imgAlt ?? ''}
             width="10"
             height="10"
-            className="mb-4"
+            className="mb-4 w-full h-auto"
           />
         )}
         <p className={styles['sidebar__text']}>{sidebarContent?.paraAlt}</p>

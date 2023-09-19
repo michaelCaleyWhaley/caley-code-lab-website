@@ -1,11 +1,9 @@
-import '../shared/globals.css';
-
 import type { Metadata } from 'next';
 import React from 'react';
 
 export const metadata: Metadata = {
-  title: 'caleyCodeLab',
-  description: 'The home of caleyCodeLab.',
+  title: 'caleyCodeLab projects',
+  description: 'caleyCodeLab the project page.',
 };
 
 export default function RootLayout({
@@ -13,9 +11,5 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <html lang="en">
-      <body>{children}</body>
-    </html>
-  );
+  return <>{children}</>;
 }

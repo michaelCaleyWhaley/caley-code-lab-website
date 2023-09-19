@@ -8,6 +8,8 @@ function ProjectTile({
   title,
   desc,
   sidebarData,
+  priority = false,
+  lazyload = 'lazy',
 }: {
   imgSrc: string;
   imgAlt: string;
@@ -24,6 +26,8 @@ function ProjectTile({
     hrefText: string;
   };
   key: string;
+  priority?: boolean;
+  lazyload?: 'lazy' | 'eager';
 }) {
   function handleOnClick() {
     var event = new CustomEvent('open-sidebar', {
@@ -40,7 +44,8 @@ function ProjectTile({
         alt={imgAlt}
         width="365"
         height="235"
-        loading="lazy"
+        loading={lazyload}
+        {...(priority && { priority })}
       />
       <h1 className={styles['project-tile__title']}>{title}</h1>
       <p className={styles['project-tile__desc']}>{desc}</p>

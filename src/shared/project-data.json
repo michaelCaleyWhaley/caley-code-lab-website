@@ -1,21 +1,5 @@
 [
   {
-    "imgSrc": "/lightning.jpg",
-    "imgAlt": "Weather App",
-    "title": "Reducing network calls",
-    "desc": "Reducing network calls by caching API responses",
-    "sidebarData": {
-      "title": "Reducing network calls",
-      "paraMain": "Reducing network activity is one of the pieces in a fast performing application. This example stores your weather forecast along with your location in local storage. Then on further requests checks whether the previous forecast is out of date, or whether your location has changed. If either condition is true it will make a call to the api, else it will retrieve the previous forecast.",
-      "imgSrc": "/lightning.jpg",
-      "imgAlt": "Weather App",
-      "paraAlt": "This project handles it's API routes with Express JS which gives it the ability to not only cache responses on the client side, but also on the server side for greater reuse of forecasts. The response is then handed over to NEXT.js which handles the front end routes.",
-      "href": "https://hull-weather-app.herokuapp.com/",
-      "hrefTitle": "Weather app link",
-      "hrefText": " Project link"
-    }
-  },
-  {
     "imgSrc": "/nextjs-logo.png",
     "imgAlt": "Next JS",
     "title": "NextJs website",
@@ -26,7 +10,7 @@
       "imgSrc": "/nextjs-logo.png",
       "imgAlt": "Next JS",
       "paraAlt": "A useful feature you may notice in this build is the usage of customEvents with ProjectTile components. The slide out sidebar listens for an event which has all the data it needs to be populated with attached. This allows the sidebar component to be completely decoupled from the ProjectTiles",
-      "href": "https://github.com/michaelCaleyWhaley/nextJsPortfolio",
+      "href": "https://github.com/michaelCaleyWhaley/caley-code-lab-website",
       "hrefTitle": "NEXT.js project link",
       "hrefText": " Project link"
     }
@@ -44,38 +28,6 @@
       "paraAlt": "In this version a very simple setup is required. A container with a background image, and a child which is position absolute, and twice the width and height of the parent. The child has a radial-gradient background which allows it to be completely dark with the exception of a circle at the centre. On mouse over you simply move the centre of the child to the mouse coordinates.",
       "href": "https://codepen.io/mikeCaley/pen/xxKpNeQ",
       "hrefTitle": "Torch light codepen link",
-      "hrefText": " Project link"
-    }
-  },
-  {
-    "imgSrc": "/spaceman.jpg",
-    "imgAlt": "astronaut waving",
-    "title": "Todo app",
-    "desc": "App built using Node and MongoDB",
-    "sidebarData": {
-      "title": "Todo App",
-      "paraMain": "My first complete project using Node. The app provides a number of endpoints via Express.js which allow a user to interact with a MongoDB database. An example would be the /todos endpoint which allows you to add a todo to the database using a shape specified by the todo model. To simplify the interactions between Express and Mongo I used a library called Mongoose, which provides a nuber of easy to use methods for Mongo database interaction.",
-      "imgSrc": "/spaceman.jpg",
-      "imgAlt": "astronaut waving",
-      "paraAlt": "",
-      "href": "https://github.com/michaelCaleyWhaley/monogodb-todo",
-      "hrefTitle": "Todo app repository",
-      "hrefText": " Project link"
-    }
-  },
-  {
-    "imgSrc": "/expenses.jpg",
-    "imgAlt": "financial ledger",
-    "title": "Expensify",
-    "desc": "Simple expenses app built using React",
-    "sidebarData": {
-      "title": "Expensify",
-      "paraMain": "This app is a front-end only expense management system. I built this as an exercise in React, Redux and React Router.",
-      "imgSrc": "/expenses.jpg",
-      "imgAlt": "financial ledger",
-      "paraAlt": "Normal React applications store state for each component in their own compartment. This means if you want one component to talk to another you have to pass data around as Props. Sometimes this is an adequate solution, however another option is to use something like Redux which provides a shared state which any component can be connected to. ",
-      "href": "https://github.com/michaelCaleyWhaley/expensesApp__React",
-      "hrefTitle": "Expenses app repository",
       "hrefText": " Project link"
     }
   },

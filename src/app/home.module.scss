@@ -13,11 +13,13 @@
     max-width: none;
     width: auto;
     left: 50%;
+    right: initial;
     transform: translate3d(-60%, 0, 0);
 
     @media all and (min-width: $tablet-size) {
-      position: relative;
-      left: 0;
+      left: initial;
+      bottom: 0;
+      right: 0;
       transform: translate3d(0, 0, 0);
     }
   }
