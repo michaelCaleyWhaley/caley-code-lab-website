@@ -3,6 +3,7 @@
 import classnames from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
+import { type MouseEvent, RefObject, useRef } from 'react';
 
 import { Layout } from '@/components/layout';
 import { ProjectTile } from '@/components/project-tile';
@@ -19,10 +20,36 @@ const mostRecentProjects = (() => {
   return recentProjects;
 })();
 
+function handleMouseMove(
+  // eslint-disable-next-line no-undef
+  e: MouseEvent<HTMLDivElement, globalThis.MouseEvent>,
+  torchRef: RefObject<HTMLDivElement>,
+) {
+  if (!torchRef.current) return;
+
+  const torch = torchRef.current;
+
+  const heroHalfWidth = torch.clientWidth / 4;
+  const heroHalfHeight = torch.clientHeight / 4;
+
+  const torchHalfHeight = torch.clientHeight / 2;
+
+  torchRef.current.style.transform = `translate3d(${
+    e.clientX + heroHalfWidth
+  }px, ${e.clientY - heroHalfHeight - torchHalfHeight - 20}px, 0)`;
+}
+
 export default function Home() {
+  const torchRef = useRef<HTMLDivElement>(null);
+
   return (
     <Layout>
-      <div className={styles.hero}>
+      <div
+        className={styles.hero}
+        onMouseMove={(e) => {
+          handleMouseMove(e, torchRef);
+        }}
+      >
         <Image
           className={styles.hero__image}
           src="/michael-caley.jpg"
@@ -33,7 +60,10 @@ export default function Home() {
           priority={true}
         />
 
-        <div className={styles.torch}></div>
+        <div
+          ref={torchRef as RefObject<HTMLDivElement>}
+          className={styles.torch}
+        ></div>
 
         <div className={styles['hero__text-area']}>
           <p className={styles['hero__title']}>
