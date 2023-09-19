@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 'use client';
 
 import classnames from 'classnames';
@@ -12,6 +13,8 @@ import { Sidebar } from '@/components/sidebar';
 import projectData from '../shared/project-data.json';
 import styles from './home.module.scss';
 
+type TimeoutRef = { current: NodeJS.Timeout | null };
+
 const mostRecentProjects = (() => {
   let recentProjects = [];
   for (let i = 0; i < 3; i++) {
@@ -21,12 +24,12 @@ const mostRecentProjects = (() => {
 })();
 
 function handleMouseMove(
-  // eslint-disable-next-line no-undef
   e: MouseEvent<HTMLDivElement, globalThis.MouseEvent>,
   torchRef: RefObject<HTMLDivElement>,
+  timeoutRef: TimeoutRef,
 ) {
   if (!torchRef.current) return;
-
+  clearTimeout(timeoutRef.current as NodeJS.Timeout);
   const torch = torchRef.current;
 
   const heroHalfWidth = torch.clientWidth / 4;
@@ -34,20 +37,39 @@ function handleMouseMove(
 
   const torchHalfHeight = torch.clientHeight / 2;
 
-  torchRef.current.style.transform = `translate3d(${
-    e.clientX + heroHalfWidth
-  }px, ${e.clientY - heroHalfHeight - torchHalfHeight - 20}px, 0)`;
+  const translateX = e.clientX + heroHalfWidth;
+  const translateY =
+    e.clientY - heroHalfHeight - torchHalfHeight - 20 + window.scrollY;
+
+  torch.style.transform = `translate3d(${translateX}px, ${translateY}px, 0)`;
+}
+
+function handleMouseLeave(
+  e: MouseEvent<HTMLDivElement, globalThis.MouseEvent>,
+  torchRef: RefObject<HTMLDivElement>,
+  timeoutRef: TimeoutRef,
+) {
+  if (!torchRef.current) return;
+  const torch = torchRef.current;
+
+  timeoutRef.current = setTimeout(() => {
+    torch.style.transform = `translate3d(50%, -50%, 0)`;
+  }, 1500);
 }
 
 export default function Home() {
   const torchRef = useRef<HTMLDivElement>(null);
+  const timeoutRef: TimeoutRef = useRef(null);
 
   return (
     <Layout>
       <div
         className={styles.hero}
         onMouseMove={(e) => {
-          handleMouseMove(e, torchRef);
+          handleMouseMove(e, torchRef, timeoutRef);
+        }}
+        onMouseLeave={(e) => {
+          handleMouseLeave(e, torchRef, timeoutRef);
         }}
       >
         <Image
