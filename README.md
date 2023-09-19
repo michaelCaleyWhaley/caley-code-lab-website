@@ -2,7 +2,7 @@
 
 This is a profile website for Michael Caley. It will feature tech blog posts and articles.
 
-Temporary url [LINK](http://caley-code-lab-website.s3-website.eu-west-2.amazonaws.com)
+Temporary url http://caley-code-lab-website.s3-website.eu-west-2.amazonaws.com
 
 ## Deploy to AWS
 
@@ -18,6 +18,7 @@ To view the website locally run the command `npm run dev` at the root of the pro
 
 ### Todo
 
+- mobile margins
 - https
 - pro url
 - email submission article
