@@ -55,4 +55,4 @@ jobs:
       
       - name: refresh cloudfront
         id: cloudfront
-        run: cloudfront/cache/refresh
+        run: make cloudfront/cache/refresh
