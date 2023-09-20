@@ -133,6 +133,7 @@
     color: $grey;
     line-height: 1.7;
     box-sizing: border-box;
+    @apply mb-4;
 
     @media all and (min-width: $tablet-size) {
       width: 33%;

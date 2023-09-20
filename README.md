@@ -19,6 +19,5 @@ To view the website locally run the command `npm run dev` at the root of the pro
 ### Todo
 
 - mobile margins
-- https
 - pro url
 - email submission article
