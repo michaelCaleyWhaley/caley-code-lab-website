@@ -18,6 +18,7 @@ resource "aws_s3_bucket_website_configuration" "caley-code-lab-website-config" {
   }
 }
 
+# manually enable public access on AWS
 resource "aws_s3_bucket_public_access_block" "example" {
   bucket = aws_s3_bucket.caley-code-lab-website.id
 

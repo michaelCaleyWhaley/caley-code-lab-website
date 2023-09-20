@@ -18,6 +18,8 @@ To view the website locally run the command `npm run dev` at the root of the pro
 
 ### Todo
 
-- mobile margins
 - pro url
+    - verify SSL
+    - cname and a record connecting to cloudfront
+    - SSL connected to cloudfront
 - email submission article

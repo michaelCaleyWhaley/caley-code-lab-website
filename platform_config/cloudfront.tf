@@ -26,13 +26,13 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
 
 
   viewer_certificate {
-    # acm_certificate_arn      = aws_acm_certificate.root_cert.arn
+    acm_certificate_arn      = aws_acm_certificate.root_cert.arn
     cloudfront_default_certificate = true
     ssl_support_method             = "sni-only"
     minimum_protocol_version       = "TLSv1.2_2021"
   }
 
-  # aliases = ["www.easycontactform.dev", "easycontactform.dev"]
+  aliases = ["www.caleycodelab.com", "caleycodelab.com"]
 
   default_cache_behavior {
     allowed_methods  = ["GET", "HEAD"]
