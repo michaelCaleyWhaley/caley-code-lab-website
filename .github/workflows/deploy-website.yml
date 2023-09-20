@@ -52,3 +52,7 @@ jobs:
         id: syncremaining
         run: make s3/push/remaining
         continue-on-error: false
+      
+      - name: refresh cloudfront
+        id: cloudfront
+        run: cloudfront/cache/refresh
