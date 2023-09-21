@@ -19,7 +19,6 @@ To view the website locally run the command `npm run dev` at the root of the pro
 ### Todo
 
 - pro url
-    - verify SSL
-    - cname and a record connecting to cloudfront
-    - SSL connected to cloudfront
+    - verify www
+- favicon
 - email submission article

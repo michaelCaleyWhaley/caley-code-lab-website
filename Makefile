@@ -24,4 +24,4 @@ s3/push/remaining:
 	aws s3 sync ./out s3://caley-code-lab-website --include "*.*"
 
 cloudfront/cache/refresh:
-	aws cloudfront create-invalidation --distribution-id E2B13P8E2HPNW7  --paths "/*"
+	aws cloudfront create-invalidation --distribution-id E36FK7UVG5GM7Q  --paths "/*"
