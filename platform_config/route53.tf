@@ -18,7 +18,7 @@ resource "aws_route53_record" "root_domain" {
 
 resource "aws_route53_record" "www_subdomain" {
   zone_id = aws_route53_zone.main.zone_id
-  name    = "www.caleycode.com"
+  name    = "www."
   type    = "CNAME"
 
   alias {

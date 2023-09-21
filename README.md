@@ -20,5 +20,6 @@ To view the website locally run the command `npm run dev` at the root of the pro
 
 - pro url
     - verify www
+    - redirect to www.
 - favicon
 - email submission article
