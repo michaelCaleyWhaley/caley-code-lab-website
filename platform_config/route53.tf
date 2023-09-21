@@ -1,7 +1,3 @@
-variable "domain" {
-  default = "caleycodelab.com"
-}
-
 resource "aws_route53_zone" "main" {
   name = aws_route53domains_registered_domain.caley-code-lab-register-domain.domain_name
 }
