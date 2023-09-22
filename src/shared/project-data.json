@@ -1,9 +1,41 @@
 [
   {
+    "imgSrc": "/mail-man.jpg",
+    "imgAlt": "HTML form submission",
+    "title": "HTML form submission",
+    "desc": "A complete solution to HTML form submissions. Leveraging serverless for efficiency and reliability.",
+    "sidebarData": {
+      "title": "HTML form submission",
+      "paraMain": "A service which allows form submissions direct from html forms AND via rest API. We allow users to sign up, which registers an email address and an access token which they can use to interact with the service. Currently all users are on a free tier which limits their monthly submissions, but soon an integration with Stripe should allow the introduction of multiple subscription levels.",
+      "imgSrc": "/mail-man.jpg",
+      "imgAlt": "Email submission service",
+      "paraAlt": "From a tech side this project has been super interesting for me because although I’ve used the tech stack before it’s the first time I have rolled it all up into one. Noteworthy mentions include Typescript, Terraform, AWS Cognito and Stripe.",
+      "href": " https://www.easycontactform.dev",
+      "hrefTitle": "www.easycontactform.dev",
+      "hrefText": "www.easycontactform.dev"
+    }
+  },
+  {
+    "imgSrc": "/site-map.jpg",
+    "imgAlt": "NextJs generated Sitemap",
+    "title": "NextJs generated Sitemap",
+    "desc": "You need to generated a sitemap in your pipeline!",
+    "sidebarData": {
+      "title": "NextJs generated Sitemap",
+      "paraMain": "I have made the mistake of manually creating sitemaps in the past. I no longer feel like it's a good use of time so I put it into the build pipeline of my projects these days.",
+      "imgSrc": "/site-map.jpg",
+      "imgAlt": "NextJs generated Sitemap",
+      "paraAlt": "I created a video of me adding just such a feature into a NextJS website I created a while back.",
+      "href": " https://youtu.be/zS-6oiwvNnc",
+      "hrefTitle": "YouTube video",
+      "hrefText": "YouTube video"
+    }
+  },
+  {
     "imgSrc": "/nextjs-logo.png",
     "imgAlt": "Next JS",
     "title": "NextJs website",
-    "desc": "Full build website utilising Node, React and NextJs",
+    "desc": "Full build website utilising Node, React and NextJs.",
     "sidebarData": {
       "title": "NEXT.js",
       "paraMain": "A full website build using the NEXT.js framework. This technology allows for fast and straight forward development using Node and React. NEXT handles alot out of the box and provides a great foundation to build from.",
@@ -19,7 +51,7 @@
     "imgSrc": "/flashlight_night.jpg",
     "imgAlt": "Torch light animation",
     "title": "Torch light",
-    "desc": "Code snippet show casing a torch effect users can interact with",
+    "desc": "Code snippet showcasing a torch effect users can interact with.",
     "sidebarData": {
       "title": "Torch light",
       "paraMain": "This code snippet was inspired from a similar effect I saw on Codepen which I felt had been down in an overly complicated way (Unfortunately, at the time of writing the original inspiration is lost to me).",
@@ -45,22 +77,6 @@
       "href": "https://codepen.io/mikeCaley/full/evaEyr",
       "hrefTitle": "codepen 3D cube link",
       "hrefText": " Project link"
-    }
-  },
-  {
-    "imgSrc": "/dsdsf.jpg",
-    "imgAlt": "",
-    "title": "",
-    "desc": "",
-    "sidebarData": {
-      "title": "",
-      "paraMain": "",
-      "imgSrc": "",
-      "imgAlt": "",
-      "paraAlt": "",
-      "href": " https://www.easycontactform.dev/",
-      "hrefTitle": "",
-      "hrefText": ""
     }
   }
 ]

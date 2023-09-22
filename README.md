@@ -18,8 +18,5 @@ To view the website locally run the command `npm run dev` at the root of the pro
 
 ### Todo
 
-- pro url
-    - verify www
-    - redirect to www.
-- favicon
 - email submission article
+- next js sitemap
