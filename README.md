@@ -18,5 +18,4 @@ To view the website locally run the command `npm run dev` at the root of the pro
 
 ### Todo
 
-- email submission article
 - next js sitemap
