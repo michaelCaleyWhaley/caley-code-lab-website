@@ -66,7 +66,7 @@ resource "aws_s3_bucket_website_configuration" "caley-code-lab-website-config-re
 
 
   redirect_all_requests_to {
-    host_name = aws_s3_bucket_website_configuration.caley-code-lab-website-config.website_endpoint
+    host_name = aws_route53_record.www_subdomain.fqdn
     protocol  = "https"
   }
 }
@@ -101,6 +101,6 @@ data "aws_iam_policy_document" "s3_read_permissions_redirect" {
   }
 }
 
-# output "instance_ip_addr" {
+# output "out_log" {
 #   value = aws_s3_bucket.caley-code-lab-website-redirect
 # }
