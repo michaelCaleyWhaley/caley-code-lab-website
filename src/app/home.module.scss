@@ -46,6 +46,7 @@
   transform: translate(50%, -50%);
   width: 200%;
   height: 200%;
+  pointer-events: none;
 
   background: radial-gradient(
     circle,

@@ -6,6 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { type MouseEvent, RefObject, useRef } from 'react';
 
+import { HeroCanvas } from '@/components/hero-canvas';
 import { Layout } from '@/components/layout';
 import { ProjectTile } from '@/components/project-tile';
 import { Sidebar } from '@/components/sidebar';
@@ -81,6 +82,8 @@ export default function Home() {
           loading="eager"
           priority={true}
         />
+
+        <HeroCanvas />
 
         <div
           ref={torchRef as RefObject<HTMLDivElement>}
