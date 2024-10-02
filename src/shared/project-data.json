@@ -1,5 +1,21 @@
 [
   {
+    "imgSrc": "/rolodex.jpg",
+    "imgAlt": "Contact management application",
+    "title": "Niche Client Management",
+    "desc": "Helping my brother quickly sort clients by recurring service date!",
+    "sidebarData": {
+      "title": "Niche Client Management",
+      "paraMain": "My brother recently started a business and found he was having two seemingly small but difficult to solve problems. Enter the coder. This application is accessible from any web enabled device, and allows you to sort you contacts by service date, alphabetically, or filter by text search.",
+      "imgSrc": "/rolodex.jpg",
+      "imgAlt": "Contact management application",
+      "paraAlt": "Experimenting with a mono-repo and Go Lang with this project has allowed me to encapsulated the entire project in one repository and given me a huge amount of speed and deployment efficieny which I am going to take forward into future projects.",
+      "href": "https://github.com/michaelCaleyWhaley/rolodex-utilitor",
+      "hrefTitle": "Rolodex Utilitor Github Repo",
+      "hrefText": "Rolodex Utilitor Github Repo"
+    }
+  },
+  {
     "imgSrc": "/mail-man.jpg",
     "imgAlt": "HTML form submission",
     "title": "HTML form submission",
